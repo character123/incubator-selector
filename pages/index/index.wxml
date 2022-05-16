@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="section">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{titles}}">
+    <button class="picker" type="primary">
+      {{titles[index]}}
+    </button>
+  </picker>
+  </view>
+  <view  class="usermotto">
+    <text wx:if="{{index == 0}}"class="user-motto">
+      {{food}}
+    </text>
+    <text wx:if="{{index == 1}}"class="user-motto">
+      {{place}}
+    </text>
+    <text wx:if="{{index == 3}}"class="user-motto">
+      {{goHome}}
+    </text>
+    <image src="{{girl}}" wx:if="{{index == 2}}"class="user-motto">
+    </image>
+  </view>
+</view>
